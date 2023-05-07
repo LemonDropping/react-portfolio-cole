@@ -1,39 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import Header from './components/Header/Header';
+import Navbar from './components/Navigation/Navbar';
 import AboutMe from './components/AboutMe/AboutMe';
 import Portfolio from './components/Portfolio/Portfolio';
-import Contact from './components/Contact/Contact';
 import Resume from './components/Resume/Resume';
 import Footer from './components/Footer/Footer';
 import './styles/App.css';
 
-const App = () => {
-  const [currentSection, setCurrentSection] = useState('About Me');
-
-  const renderSection = () => {
-    switch (currentSection) {
-      case 'About Me':
-        return <AboutMe />;
-      case 'Portfolio':
-        return <Portfolio />;
-      case 'Contact':
-        return <Contact />;
-      case 'Resume':
-        return <Resume />;
-      default:
-        return <AboutMe />;
-    }
-  };
-
+export default function App() {
   return (
-    <div className="App">
+    <main classname="text-gray-400 bg-gray-900 body-font">
       <Header />
-      <main>
-        {renderSection()}
-      </main>
+      <Navbar />
+      <AboutMe />
+      <Portfolio />
+      <Portfolio />
+      <AboutMe />
+      <Resume />
       <Footer />
-    </div>
+    </main>
   );
-};
-
-export default App;
+}
