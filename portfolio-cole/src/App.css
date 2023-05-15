@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
+:root {
+  --opacity: rgba(255, 255, 255, 0.25);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  /* display: flex; */
+  background-image: url("./assets/gradientBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  min-height: 100%;
+  min-width: 100%;
+  /* margin-bottom: 40px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1,
+p,
+h3,
+h4, h6 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skills {
+  font-weight: lighter;
+}
+
+.navbar {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  top: 0;
+  background-color: transparent;
+  padding-top: 80px;
+}
+
+.home-name,
+.home-photo {
+  width: 100%;
+  /* margin-top: 5%; */
+}
+
+.home-name {
+  /* margin-top: 12%; */
+  margin-bottom: 30px;
+}
+
+.contact-pic {
+  margin-left: 10%;
+  width: 90%;
+}
+
+.about-me {
+  font-size: 22px;
+  line-height: 1.4;
+  width: 80%;
+  padding-top: 8px;
+}
+
+.quote-wrapper {
+  height: 100%;
+  position: relative;
+  width: 80%;
+}
+
+.box {
+  background-color: var(--opacity);
+  padding: 10px;
+  overflow: hidden;
+  border: none;
+}
+
+.card-title {
+  color: white;
+  font-weight: bolder;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.card {
+  background-color: var(--opacity);
+  padding: 20px;
+  /* max-width: 40%; */
+  border: none;
+  margin-bottom: 30px;
+  max-width: 90%;
+  margin-top: 5%;
+}
+
+.project-box {
+  position: inherit;
+}
+
+.list-group-item {
+  background-color: var(--opacity);
+color: white;
+font-size: 25px;
+margin: 2px;
+border: none;
+}
+
+.project-images {
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.active:active {
+  font-weight: bolder;
+  color: pink;
+  text-decoration: none;
+  background-color: var(--opacity);
+}
+
+.nav-link:hover {
+  color: aliceblue;
+  font-weight: bolder;
+  background-color: #8a2bf9;
+}
+
+.resume {
+  font-weight: bolder;
+  background-color: blueviolet;
+  margin-bottom: 10px;
+
+}
+
+.home-container, .contact-container, .resume-container {
+  padding-top: 5%;
+  /* padding-top: 80px; */
+}
+
+.resume-container {
+  width: 50%;
+}
+
+.resume-skills {
+  margin-top: 2%;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.4;
+  /* width: 80%; */
+}
+
+.icon-nav {
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.list-group {
+  position: fixed;
+  margin-left: 10%;
+  padding-top: 3%;
+  
+}
+
+/* .project-padding {
+  padding-top: 50px;
+} */
+
+.project-links {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 15px;
+  font-weight: bold;
+  background-color:blueviolet;
+  font-size: 22px;
+}
+
+.card-text {
+font-size: 22px;
+margin-bottom: 10%;
+}
+
+.project-links:hover {
+  color: aliceblue;
+  font-weight: bolder;
+}
+
+.btn {
+  background-color: blueviolet;
+  color: white;
+  font-weight: bolder;
+}
+
+.contact {
+  background-color: var(--opacity);
+  border-style: none;
+  opacity: 50%;
+}
+
+.form-label {
+  color: white;
+  font-weight: bold;
+}
+
+.rounded-pill:hover {
+  background-color: #8a2bf9;
+  color: white;
+}
+
+
+
+
+/* .footer-container {
+  display: flex;
+  justify-content: center;
+} */
+
+.footer {
+  margin-top: 2%;
+  bottom: 0;
+  height: 60px;   
+  justify-content: center;
 }

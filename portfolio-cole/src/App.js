@@ -1,24 +1,44 @@
-import React from 'react';
-import { useState } from 'react';
-import Header from './components/Header/Header';
-import Navbar from './components/Navigation/Navbar';
-import AboutMe from './components/AboutMe/AboutMe';
-import Portfolio from './components/Portfolio/Portfolio';
-import Resume from './components/Resume/Resume';
-import Footer from './components/Footer/Footer';
-import './styles/App.css';
+import React, { useState } from 'react';
 
-export default function App() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer'
+// import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Home from './components/Home';
+import Resume from './components/Resume'
+// import all components
+
+
+function App() {
+  const [currentPage, setCurrentPage] = useState('Home');
+
+  const renderPage = () => {
+    if (currentPage === 'Home') {
+      return <Home />;
+    } if (currentPage === 'Projects') {
+      return <Projects />;
+    }  if (currentPage === 'Resume') {
+      return <Resume />;
+    } return <Contact />;
+  };
+  const handlePageChange = (page) => setCurrentPage(page);
+
   return (
-    <main classname="text-gray-400 bg-gray-900 body-font">
-      <Header />
-      <Navbar />
-      <AboutMe />
-      <Portfolio />
-      <Portfolio />
-      <AboutMe />
-      <Resume />
+    <div>
+      {/* We are passing the currentPage from state and the function to update it */}
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      
+      {/* Here we are calling the renderPage method which will return a component  */}
+      {renderPage()}
+
       <Footer />
-    </main>
+    </div>
   );
 }
+
+export default App;
+
+//this is where to tell the app what and where to return
